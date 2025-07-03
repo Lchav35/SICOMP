@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Distribuidora Sul",
+    "produto": "Arroz",
+    "regiao": "Sul",
+    "contato": "contato@suldistribuidora.com"
+  },
+  {
+    "nome": "Centro Alimentos",
+    "produto": "Feijão",
+    "regiao": "Centro-Oeste",
+    "contato": "vendas@centroalimentos.com"
+  },
+  {
+    "nome": "Norte Frutas",
+    "produto": "Banana",
+    "regiao": "Norte",
+    "contato": "frutas@nortefrutas.com"
+  }
+]
