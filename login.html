@@ -68,5 +68,19 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 });
 </script>
 
+  <script>
+window.onload = function() {
+  const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+  if (usuario) {
+    const saudacao = document.createElement('p');
+    saudacao.textContent = `Bem-vindo(a), ${usuario.nome} da região ${usuario.regiao}!`;
+    document.body.insertBefore(saudacao, document.getElementById('uploadForm'));
+  } else {
+    window.location.href = 'login.html';
+  }
+};
+</script>
+
+
 </body>
 </html>
