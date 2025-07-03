@@ -36,3 +36,7 @@ function buscarFornecedor(cotacoes) {
       document.getElementById('resultado').innerHTML = resultadoHTML;
     });
 }
+document.getElementById('cotacaoFile').addEventListener('change', function() {
+  const nomeArquivo = this.files[0]?.name || "Nenhum arquivo selecionado";
+  document.getElementById('resultado').innerHTML = `<p>📁 Arquivo carregado: ${nomeArquivo}</p>`;
+});
