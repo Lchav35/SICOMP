@@ -1,0 +1,10 @@
+/mercado-cotacoes/
+├── index.html        ← Página principal para upload da cotação
+├── login.html        ← Login de usuários (compradores e fornecedores)
+├── cadastro.html     ← Cadastro de novos usuários
+├── dashboard.html    ← Resultados e interface da busca
+├── /assets/
+│   ├── style.css     ← Estilos visuais do sistema
+│   └── script.js     ← Comportamentos e funcionalidades
+├── /uploads/         ← Pasta temporária para salvar arquivos Excel
+├── /data/            ← Simulação de base de dados (por enquanto em JSON)
