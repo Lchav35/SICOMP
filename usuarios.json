@@ -1,8 +1,4 @@
 
-
-Simulando os dados dos usuários
-Você vai salvar isso em /data/usuarios.json:
-
 [
   {
     "email": "joao@sistema.com",
