@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro | Sistema de Cotação</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .cadastro-container {
+      max-width: 450px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .cadastro-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cadastro-container">
+    <div class="cadastro-title">📋 Cadastro de Usuário</div>
+    <form id="cadastroForm">
+      <input type="text" placeholder="Nome completo" required>
+      <input type="text" placeholder="E-mail" required>
+      <input type="text" placeholder="Região" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p>Já tem conta? <a href="login.html">Faça login</a></p>
+  </div>
+</body>
+</html>
