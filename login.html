@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Sistema de Cotação</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .login-footer {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-title">🔐 Login do Sistema</div>
+    <form id="loginForm">
+      <input type="text" placeholder="Usuário ou E-mail" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="login-footer">
+      <p>Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+  </div>
+</body>
+</html>
