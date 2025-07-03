@@ -4,19 +4,87 @@
   <meta charset="UTF-8">
   <title>Consulta de Cotação</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e2e2e2, #c9d6ff);
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      color: #333;
+    }
+  </style>
 </head>
-  <!-- Adicione isso ao final do seu index.html antes do </body> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <body>
-  <h1>🛒 Sistema de Consulta de Preços</h1>
-  <p>Faça o upload de sua planilha de cotação (.xlsx)</p>
-  <form id="uploadForm">
-    <input type="file" id="cotacaoFile" accept=".xlsx" required>
-    <button type="submit">Buscar fornecedores</button>
-  </form>
+  <div class="container">
+    <h1>🛒 Consulta de Cotação</h1>
+    <p>Selecione sua planilha Excel com os produtos que deseja cotar.</p>
+    <form id="uploadForm">
+      <input type="file" id="cotacaoFile" accept=".xlsx" required>
+      <button type="submit">🔍 Buscar fornecedores</button>
+    </form>
+    <div id="resultado"></div>
+  </div>
 
-  <div id="resultado"></div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script src="assets/script.js"></script>
 </body>
+
 </html>
+document.getElementById('cotacaoFile').addEventListener('change', function() {
+  const nomeArquivo = this.files[0]?.name || "Nenhum arquivo selecionado";
+  document.getElementById('resultado').innerHTML = `<p>📁 Arquivo carregado: ${nomeArquivo}</p>`;
+});
