@@ -1,61 +1,15 @@
 body {
   font-family: Arial, sans-serif;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
   background-color: #f2f2f2;
-  text-align: center;
-  padding: 30px;
 }
-
-h1 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #666;
-}
-
-form {
-  margin-top: 20px;
-}
-
-input[type="file"] {
-  padding: 10px;
-  margin: 10px;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-#resultado {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(135deg, #e2e2e2, #c9d6ff);
-}
-
-form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
