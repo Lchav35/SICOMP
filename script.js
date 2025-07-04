@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Verifica se o usuário está logado em páginas protegidas
+  const protectedPages = ['index.html', 'dashboard.html'];
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  if (protectedPages.includes(currentPage)) {
+    const loggedUser = localStorage.getItem('loggedUser');
+    if (!loggedUser) {
+      window.location.href = 'login.html';
+    }
+  }
+
   // Inicializa dados no localStorage se não existirem
   if (!localStorage.getItem('users')) {
     localStorage.setItem('users', JSON.stringify([
@@ -83,6 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <td>${cotacao.Fornecedor || 'N/A'}</td>
       `;
       cotacoesBody.appendChild(row);
+    });
+  }
+
+  // Logout
+  const logoutLink = document.getElementById('logout');
+  if (logoutLink) {
+    logoutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('loggedUser');
+      window.location.href = 'login.html';
     });
   }
 });
